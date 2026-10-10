@@ -1,0 +1,22 @@
+{
+  "name": "cd.fomapay.unity",
+  "version": "0.1.0",
+  "displayName": "FomaPay",
+  "description": "SDK Unity officiel de FomaPay : achats en jeu payés par portefeuille FomaPay ou Mobile Money (M-Pesa, Orange Money, Airtel Money) en RDC.",
+  "unity": "2021.3",
+  "keywords": ["fomapay", "payments", "iap", "mobile money", "rdc"],
+  "author": { "name": "FomaPay", "url": "https://fomapay.cd" },
+  "documentationUrl": "https://docs.fomapay.cd",
+  "license": "MIT",
+  "dependencies": {
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Boutique en jeu",
+      "description": "Un bouton d'achat qui ouvre la fenêtre de paiement et crédite le joueur.",
+      "path": "Samples~/Shop"
+    }
+  ]
+}

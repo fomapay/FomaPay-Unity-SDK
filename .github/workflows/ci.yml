@@ -1,0 +1,14 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      # Le cœur du SDK ne dépend pas de Unity : il se teste avec dotnet.
+      - run: dotnet test "Tests~/FomaPay.Unity.Core.Tests"
+      # La couche Unity est compilée contre des bouchons de son API.
+      - run: dotnet build "Tests~/UnityStubs"

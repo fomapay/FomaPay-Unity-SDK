@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Tests du cœur du SDK (Runtime/Core), qui ne dépend pas de Unity : `dotnet test` suffit. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <NoWarn>$(NoWarn);MSTEST0037</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\Runtime\Core\*.cs" LinkBase="Core" />
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+
+</Project>
